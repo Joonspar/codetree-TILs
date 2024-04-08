@@ -1,7 +1,7 @@
 n = int(input())
 cnt = 0
 i = 1
-while True:
+while cnt <3:
     print(i*n,end=' ')
     i += 1
     if (i*n) % 5 == 0:
