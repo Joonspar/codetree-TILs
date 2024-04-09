@@ -1,17 +1,20 @@
 n = int(input())
-li = list(map(int,input().split()))
-m = 0
-l = []
+arr = list(map(int, input().split()))
 
+max_val = 0
+dup = []
 for i in range(n):
-    if li[i] in l:
+    if arr[i] in dup:
         continue
-    if li[i] in li[i+1:]:
-        l.append(li[i])
+    
+    if arr[i] in arr[i + 1:]:
+        dup.append(arr[i])
         continue
-    if li[i] > m:
-        m = li[i]
+
+    if arr[i] > max_val:
+        max_val = arr[i]
+
 if max_val == 0:
     print(-1)
 else:
-    print(m_val)
+    print(max_val)
