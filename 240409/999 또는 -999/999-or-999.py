@@ -1,5 +1,5 @@
 li = list(map(int,input().split()))
-ma = 0
+ma = li[0]
 mi = li[0]
 for i in li:
     if i == 999 or i == - 999:
