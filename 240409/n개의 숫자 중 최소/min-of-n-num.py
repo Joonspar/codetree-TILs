@@ -1,6 +1,6 @@
 n = int(input())
 li = list(map(int,input().split()))
-mi = 100
+mi = li[0]
 for i in li:
     if mi > i:
         mi = i
