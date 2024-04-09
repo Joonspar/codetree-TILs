@@ -1,10 +1,11 @@
 n = int(input())
 li = list(map(int,input().split()))
 cnt = 0
-
-for i in li:
-    if i == 2:
+result = 0
+for idx,el in enumerate(li):
+    if el == 2:
         cnt += 1
-    elif cnt == 3:
-        print(li.index(i))
-        break
+        if cnt == 3:
+            result = idx
+
+print(result+1)
