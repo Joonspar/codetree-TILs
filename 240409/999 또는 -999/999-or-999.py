@@ -8,4 +8,4 @@ for i in li:
         ma = i
     elif mi < i:
         mi = i
-print(ma,mi)
+print(mi,ma)
