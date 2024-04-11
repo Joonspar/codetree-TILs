@@ -19,11 +19,11 @@ if n % 2 == 0:
 else:
     for col in range(n,0,-1):
         if col % 2 == 0:
-            for row in range(n-1,-1,-1):
+            for row in range(n):
                 arr[row][col-1] = cnt
                 cnt += 1
         else:
-            for row in range(n):
+            for row in range(n-1,-1,-1):
                 arr[row][col-1] = cnt
                 cnt += 1
 for i in arr:
