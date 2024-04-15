@@ -1,0 +1,5 @@
+s1 = input()
+s2 = input()
+result1 = s1.replace(" ",'')
+result2 = s2.replace(" ",'')
+print(result1,result2,sep='')
