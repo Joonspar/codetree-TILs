@@ -2,7 +2,7 @@ n = int(input())
 li = []
 cnt = 0
 res = 0
-for _ in range(4):
+for _ in range(n):
     s = input()
     li.append(s)
 c = input()
