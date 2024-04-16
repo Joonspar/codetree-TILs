@@ -9,5 +9,5 @@ for i in range(10):
         cnt += 1
         if cnt >= 1:
             print(li[i])
-    if cnt == 0:
-        print('None')
+if cnt == 0:
+    print('None')
