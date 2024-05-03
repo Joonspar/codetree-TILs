@@ -5,7 +5,7 @@ for i in range(len(binary)):
     arr.append(a)
 num = 0
 
-for i in range(5):
+for i in range(len(arr)):
     num = num * 2 + arr[i]
 
 print(num)
