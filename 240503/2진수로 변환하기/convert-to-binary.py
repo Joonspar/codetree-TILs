@@ -1,10 +1,17 @@
+# 변수 선언 및 입력
 n = int(input())
-arr = []
+digits = []
 
-while n > 0:
+# 이진수로 변환합니다.
+while True:
     if n < 2:
-        arr.append(n)
+        digits.append(n)
         break
-    arr.append(n%2)
+
+    digits.append(n % 2)
     n //= 2
-print(*arr[::-1],sep='')
+
+# 이진수를 출력 합니다.
+# 뒤집은 다음에 출력해야 함에 유의합니다.
+for digit in digits[::-1]:
+    print(digit, end="")
