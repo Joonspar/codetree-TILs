@@ -1,6 +1,6 @@
 s = input()
 t = input()
-for i in range(len(s)-len(t)):
+for i in range(len(s)-len(t)+1):
     if t in s[i:len(t)+i:]:
         print(i)
         break
