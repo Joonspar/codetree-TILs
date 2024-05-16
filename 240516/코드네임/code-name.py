@@ -9,6 +9,8 @@ for _ in range(5):
     score = int(score)
     li.append(CodeName(name,score))
 
-small = li[0]
-
-print(small.name,small.score)
+idx = 0
+for j in range(1,5):
+    if li[idx].score > li[j].score:
+        idx = j
+print(li[idx].name,li[idx].score)
