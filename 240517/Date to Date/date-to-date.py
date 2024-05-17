@@ -5,7 +5,7 @@ s = 0
 if d1 > d2:
     for i in range(m1,m2):
         s += month[i]
-    s -= (d1-d2+1)
+    s -= (d1-d2-1)
 else:
     for i in range(m1,m2):
         s += month[i]
