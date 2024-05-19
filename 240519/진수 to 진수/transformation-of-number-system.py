@@ -7,6 +7,7 @@ arr = []
 while s>=2:
     arr.append(s%b)
     s //= b
-arr.append(s)
+if s != 0:
+    arr.append(s)
 
 print(*arr[::-1],sep='')
