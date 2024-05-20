@@ -13,4 +13,5 @@ for i in range(1,n):
     else:
         res = max(cnt,res)
         cnt = 0
+    res = max(res,cnt)
 print(res+1)
