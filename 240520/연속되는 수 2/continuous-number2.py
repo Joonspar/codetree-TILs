@@ -5,7 +5,7 @@ for _ in range(n):
 cnt = 1
 arr2 = []
 for i in range(n):
-    if arr[i] == arr[i-1]:
+    if i == 0 or arr[i] == arr[i-1]:
         cnt += 1
     else:
         arr2.append(cnt)
