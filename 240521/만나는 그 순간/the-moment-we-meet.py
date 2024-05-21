@@ -2,8 +2,8 @@ n,m = map(int,input().split())
 cur = 0
 arr = [0] * 1
 brr = [0] * 1
-cnta = 0
-cntb = 0
+cnta = 1
+cntb = 1
 for _ in range(n):
     direction , distance = input().split()
     distance = int(distance)
