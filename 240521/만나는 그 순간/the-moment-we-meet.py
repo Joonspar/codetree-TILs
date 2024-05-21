@@ -26,8 +26,8 @@ for _ in range(m):
         for _ in range(distance):
             cntb += 1
             brr.append(cntb)
-
-for i in range(1,len(arr)-1):
+ans = 0
+for i in range(1,len(arr)):
     if arr[i] == brr[i]:
         ans = i
         break
