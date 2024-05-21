@@ -2,8 +2,8 @@ n,m = map(int,input().split())
 cur = 0
 arr = [0] * 1
 brr = [0] * 1
-cnta = 1
-cntb = 1
+cnta = 0
+cntb = 0
 for _ in range(n):
     direction , distance = input().split()
     distance = int(distance)
@@ -27,7 +27,7 @@ for _ in range(m):
             cntb += 1
             brr.append(cntb)
 
-for i in range(1,len(arr)):
+for i in range(1,len(arr)-1):
     if arr[i] == brr[i]:
         ans = i
         break
