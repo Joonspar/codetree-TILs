@@ -26,7 +26,15 @@ for _ in range(m):
             cntb += 1
             B.append(cntb)
 res = 0
-for i in range(len(A)):
-    if A[i-1] == B[i-1] and A[i] == B[i]:
+max_length = max(len(A), len(B))
+
+# A와 B의 경로를 동일한 길이로 맞추기 위해 부족한 부분은 마지막 위치로 채움
+A += [A[-1]] * (max_length - len(A))
+B += [B[-1]] * (max_length - len(B))
+
+# 만남 횟수 계산
+for i in range(1, max_length):
+    if A[i-1] != B[i-1] and A[i] == B[i]:
         res += 1
-print(res+1)
+
+print(res)
