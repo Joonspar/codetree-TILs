@@ -1,13 +1,4 @@
-T = 10000000
-
-n,m = map(int,input().split())
-a,b = [0] * T , [0] * T
-
-time_a = 1
-for _ in range(n):
-    v,t = map(int,input().split())
-    for _ in range(t):
-        a[time_a] = a[time_a-1] + vMAX_T = 1000000
+MAX_T = 1000000
 
 # 변수 선언 및 입력
 n, m = tuple(map(int, input().split()))
