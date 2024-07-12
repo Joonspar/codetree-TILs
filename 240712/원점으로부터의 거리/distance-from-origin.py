@@ -1,7 +1,7 @@
 class Class:
     def __init__(self,x,y,num):
-        self.x = x
-        self.y = y
+        self.x = abs(x)
+        self.y = abs(y)
         self.num = num
 
 n = int(input())
