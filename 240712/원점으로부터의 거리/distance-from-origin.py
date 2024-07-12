@@ -11,7 +11,7 @@ for i in range(n):
     x,y = list(map(int,input().split()))
     distances.append(Class(x,y,i+1))
 
-distances.sort(key = lambda x : (x.x + x.y),x.num)
+distances.sort(key = lambda x : ((x.x + x.y), x.num))
 
 for elem in distances:
     print(elem.num)
