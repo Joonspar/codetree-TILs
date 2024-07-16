@@ -1,6 +1,6 @@
 n = int(input())
 
-arr = [0] * 10000000
+arr = [0] * 100000
 current = n * 100
 
 for i in range(n):
@@ -11,7 +11,7 @@ for i in range(n):
             arr[j] = 'W'
         current -= x
     elif directions == 'R':
-        for j in range(current+1,current+x+1):
+        for j in range(current+1,current+x):
             arr[j] = 'B'
         current += x
 
