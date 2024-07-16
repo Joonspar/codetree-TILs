@@ -9,11 +9,11 @@ for i in range(n):
     if directions == 'L':
         for j in range(current, current - x, -1):
             arr[j] = 'W'
-        current -= (x+1)
+        current = current - x + 1
     elif directions == 'R':
         for j in range(current, current + x):
             arr[j] = 'B'
-        current += (x-1)
+        current = current + x -1
 
 cntb = 0
 cntw = 0
