@@ -1,6 +1,6 @@
 n = int(input())
 
-arr = [0] * n * 1000
+arr = [0] * 10000000
 current = n * 100
 
 for i in range(n):
