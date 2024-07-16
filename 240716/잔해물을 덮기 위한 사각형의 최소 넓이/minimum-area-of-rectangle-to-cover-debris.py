@@ -9,7 +9,9 @@ second_x = x2_2 - x1_2
 second_y = y2_2 - y2_1
 second_area = second_x * second_y
 
-if y2_1 > y2_2 or y1_1 < y2_1:
+if y2_1 > y2_2 or y1_1 > y2_1:
     print(first_area)
+elif x1_1 >= x1_2 and y1_1 >= y1_2 and x2_1 <= x2_2 and y2_1 <= y2_2 :
+    print(0)
 else:
-    print(second_area)
+    print(first_area - second_area)
