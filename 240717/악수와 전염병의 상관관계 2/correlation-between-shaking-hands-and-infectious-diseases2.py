@@ -9,10 +9,10 @@ def find_infected_developers(N, K, P, T, handshakes):
         x -= 1
         y -= 1
         
-        if infected[x] == 1 and handshake_count[x] < K:
+        if infected[x] == 1 and handshake_count[x] <= K:
             infected[y] = 1
             handshake_count[x] += 1
-        if infected[y] == 1 and handshake_count[y] < K:
+        if infected[y] == 1 and handshake_count[y] <= K:
             infected[x] = 1
             handshake_count[y] += 1
     
