@@ -3,7 +3,7 @@ arr = []
 for i in range(n):
     arr.append(int(input()))
 
-max_num = 1
+max_num = -1
 
 def check_no_carry(a, b, c):
     str_a, str_b, str_c = str(a), str(b), str(c)
@@ -24,5 +24,5 @@ for i in range(n):
             su = arr[i] + arr[j] + arr[k]
             if check_no_carry(arr[i], arr[j], arr[k]):
                 max_num = max(max_num, su)
-
+            
 print(max_num)
