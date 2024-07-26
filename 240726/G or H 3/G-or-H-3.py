@@ -6,7 +6,7 @@ for i in range(n):
     state = int(state)
     arr[state] = point
 max_cnt = 0
-for i in range(1,n+1):
+for i in range(1,n-k+2):
     res = 0
     for j in range(i,i+k+1):
         if arr[j] == 'G':
