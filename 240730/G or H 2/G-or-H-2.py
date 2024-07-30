@@ -18,13 +18,14 @@ for start in range(N):
     g_count = 0
     h_count = 0
     for end in range(start, N):
-        if people[end].second == 'G':
+        if people[end][1] == 'G':
             g_count += 1
         else:
             h_count += 1
         
+        # 조건을 만족하는 경우, 사진 크기 계산
         if g_count == h_count or g_count == 0 or h_count == 0:
-            photo_size = people[end].first - people[start].first
+            photo_size = people[end][0] - people[start][0]
             if end != start:
                 max_photo_size = max(max_photo_size, photo_size)
 
