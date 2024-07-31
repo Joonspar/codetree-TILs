@@ -4,7 +4,7 @@ def get_diff(i,j,k):
     second_team = sum(arr) - first_team
     return abs(first_team - second_team)
 
-min_diff = 100
+min_diff = 100000000
 for i in range(0,6):
     for j in range(i+1,6):
         for k in range(j+1,6):
