@@ -6,8 +6,7 @@ def get_diff(i,j,k):
 
 min_diff = 100
 for i in range(0,6):
-    for j in range(0,6):
-        for k in range(0,6):
+    for j in range(i+1,6):
+        for k in range(j+1,6):
             min_diff = min(min_diff,get_diff(i,j,k))
-
 print(min_diff)
