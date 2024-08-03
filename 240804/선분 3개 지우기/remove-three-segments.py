@@ -1,35 +1,38 @@
+MAX_A = 100
+
+# 변수 선언 및 입력
 n = int(input())
-segments = [
+section = [
     tuple(map(int, input().split()))
     for _ in range(n)
 ]
-cnt = 0
-
-# 가능한 모든 3개의 선분 조합을 순회
+    
+# 3개의 선분을 모두 골라보면서
+# 모두 겹쳐지지 않도록 하는 가짓수를 구합니다.
+ans = 0
 for i in range(n):
-    for j in range(i + 1, n):
-        for k in range(j + 1, n):
-            # 3개의 선분을 제거하고 남은 선분 리스트 생성
-            remaining_segments = [
-                segments[m] for m in range(n)
-                if m != i and m != j and m != k
-            ]
-            
-            # 남은 선분들이 겹치지 않는지 확인
-            non_overlapping = True
-            for a in range(len(remaining_segments)):
-                for b in range(a + 1, len(remaining_segments)):
-                    seg1 = remaining_segments[a]
-                    seg2 = remaining_segments[b]
-                    if not (seg1[1] <= seg2[0] or seg2[1] <= seg1[0]):
-                        non_overlapping = False
-                        break
-                if not non_overlapping:
-                    break
-            
-            # 겹치지 않는다면 경우의 수 증가
-            if non_overlapping:
-                cnt += 1
+	for j in range(i + 1, n):
+		for k in range(j + 1, n):
+            # i, j, k번 선분을 제외했을 때
+            # 모든 선분이 겹치지 않으면 정답을 1 추가합니다.
+			
+			# overlap : 모든 선분이 겹치지 않으면 false
+			overlap = False
+			arr = [0] * (MAX_A + 1)
+			
+			for x in range(n):
+				# 제외한 3개의 선분이면 넘어갑니다.
+				if x == i or x == j or x == k:
+					continue
+				
+				for y in range(section[x][0], section[x][1] + 1):
+					arr[y] += 1
+				
+			for x in range(MAX_A + 1):
+				if arr[x] > 1:
+					overlap = True
+				
+			if overlap == False:
+				ans += 1
 
-# 결과 출력
-print(cnt-1)
+print(ans)
