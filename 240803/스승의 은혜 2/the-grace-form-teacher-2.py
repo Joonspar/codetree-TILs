@@ -1,7 +1,7 @@
 n,b = map(int,input().split())
 cnt = 0
 p = []
-count = []
+count = [0] * n
 for _ in range(n):
     price = int(input())
     p.append(price)
@@ -14,9 +14,8 @@ for i in range(n):
             p[i] = p[i] // 2
         total += p[j]
         if total <= b:
-            cnt += 1
+            count[i] += 1
         else:
-            count.append(cnt)
             p[i] *= 2
             break
 print(max(count))
