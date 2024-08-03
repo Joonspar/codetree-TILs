@@ -7,13 +7,14 @@ for _ in range(n):
 
 for i in range(n):
     total = 0
-    cnt = 0
+    cnt = 1
     for j in range(n):
         if i == j:
             p[i] = p[i] // 2
         total += p[j]
         if total <= b:
             cnt += 1
-        elif total > b:
+        else:
             p[i] *= 2
+            break
 print(cnt)
