@@ -15,6 +15,6 @@ for i in range(n):
                 pair.append([a,b])
                 break
 if bomb:
-    print(max(bombs[pair[0][0]:pair[0][1]]))
+    print(bombs.index(max(bombs[pair[0][0]:pair[0][1]]))+1)
 else:
     print(-1)
