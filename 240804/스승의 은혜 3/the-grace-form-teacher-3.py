@@ -4,7 +4,7 @@ for _ in range(n):
     a, c = map(int, input().split())
     cost.append([a,c])
 count = [0] * n
-cost = sorted(cost, key=lambda x: sum(x))
+cost.sort()
 for i in range(n):
     total = 0
     for j in range(n):
