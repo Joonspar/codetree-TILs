@@ -6,7 +6,7 @@ for _ in range(n):
     present.append(a)
     ship.append(c)
 
-count = [0] * n
+count = [0] * 101
 
 for i in range(n):
     total = 0
