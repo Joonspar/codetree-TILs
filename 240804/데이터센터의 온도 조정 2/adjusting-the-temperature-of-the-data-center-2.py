@@ -6,8 +6,8 @@ for i in range(n):
     t_a.append(a)
     t_b.append(b)
 
-def section(l,r,t):
-    if t > l:
+def section(l,t,r):
+    if t < l:
         return c
     elif l <= t and t <= r:
         return g
@@ -17,9 +17,9 @@ def section(l,r,t):
 def total(t):
     res = 0
     for i in range(n):
-        res += section(t_a[i],t_b[i],t)
+        res += section(t_a[i],t,t_b[i])
     return res
 ans = 0
 for t in range(1,1001):
     ans = max(ans,total(t))
-print(ans+1)
+print(ans)
