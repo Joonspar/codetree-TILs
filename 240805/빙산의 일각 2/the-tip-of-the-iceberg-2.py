@@ -1,17 +1,16 @@
 n = int(input())
 heights = []
-bulk = 0
-is_seperated = False
 for _ in range(n):
     heights.append(int(input()))
+ans = 0
 for i in range(1,1001):
     cnt = 0
+    is_chunk = True
     for j in range(n):
-        heights[j] -= i
-    for k in range(1,n):
-        if heights[k-1] > 0 and heights[k] <= 0:
+        if heights[j] <= i:
+            is_chunk = True
+        elif heights[j] > i and is_chunk == True:
+            is_chunk = False
             cnt += 1
-    bulk = max(bulk,cnt)
-    for l in range(n):
-        heights[l] += i
-print(bulk+1)
+    ans = max(ans,cnt)
+print(ans)
