@@ -15,4 +15,4 @@ for i in range(3):
         if cups[tries[2]-1] == 1:
             cnt += 1
     cnts.append(cnt)
-print(cnts.index(max(cnts))+1)
+print(max(cnts))
