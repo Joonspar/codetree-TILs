@@ -1,8 +1,8 @@
 n = int(input())
-cups = [0] * n
-ans = 0
-for i in range(3):
-    a, b, c = map(int,input().split())
+cnts = []
+for i in range(n):
+    a,b,c = map(int,input().split())
+    cups = [0] * 3
     cups[i] = 1
     cnt = 0
     for j in range(n):
@@ -11,7 +11,6 @@ for i in range(3):
         cups[b-1] = temp
         if cups[c-1] == 1:
             cnt += 1
-    ans = max(cnt,ans)
-    cups[i] -= 1
+    cnts.append(cnt)
 
-print(ans)
+print(cnts.index(max(cnts)))
