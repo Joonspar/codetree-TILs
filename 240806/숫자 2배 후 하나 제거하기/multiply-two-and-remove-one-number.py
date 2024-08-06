@@ -1,6 +1,6 @@
 n = int(input())
 arr = list(map(int,input().split()))
-ans = 100
+ans = 10000
 for i in range(n):
     arr[i] *= 2
     for j in range(n):
