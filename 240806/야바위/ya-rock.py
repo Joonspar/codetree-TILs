@@ -7,8 +7,8 @@ cnts = []
 for i in range(3):
     cnt = 0
     cups = [0] * 3
+    cups[i] = 1
     for tries in games:
-        cups[i] = 1
         temp = cups[tries[0]-1]
         cups[tries[0]-1] = cups[tries[1]-1]
         cups[tries[1]-1] = temp
