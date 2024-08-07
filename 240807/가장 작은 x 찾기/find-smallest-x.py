@@ -5,7 +5,7 @@ num = [
 ]
 correct = False
 ans = 10000
-for x in range(1,n+1):
+for x in range(1,ans+1):
     for a,b in num:
         x *= 2
         if a <= x <= b:
