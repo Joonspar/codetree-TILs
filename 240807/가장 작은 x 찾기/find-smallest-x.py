@@ -4,7 +4,7 @@ num = [
     for _ in range(n)
 ]
 correct = False
-ans = 1000
+ans = 10000
 for x in range(1,n+1):
     for a,b in num:
         x *= 2
