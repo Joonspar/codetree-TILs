@@ -5,11 +5,11 @@ sections = [
 ]
 ans = 0
 cnts = []
-for i in range(m):
-    cnt = 1
-    for k in range(m):
-        for j in range(k+1,m):
-            if sections[k] == sections[j] or sections[k].reverse() == sections[j] or sections[k] == sections[j].reverse():
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        cnt = 0
+        for k in range(m):
+            if i in sections[k] and j in sections[k]:
                 cnt += 1
-    cnts.append(cnt)
-print(max(cnts))
+        ans = max(cnt,ans)
+print(ans)
