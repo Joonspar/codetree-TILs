@@ -10,4 +10,7 @@ for i in range(n):
             cnt += 1
     max_bombs[bombs[i]] += cnt
 ans = max(max_bombs)
-print(max_bombs.index(ans))
+if sum(max_bombs) == 0:
+    print(0)
+else:
+    print(max_bombs.index(ans))
