@@ -1,5 +1,6 @@
 n,k = map(int,input().split())
 bombs = []
+cnts = []
 for _ in range(n):
     bombs.append(int(input()))
 max_bombs = [0] * 10000000
@@ -13,4 +14,7 @@ ans = max(max_bombs)
 if sum(max_bombs) == 0:
     print(0)
 else:
-    print(max_bombs.index(ans))
+    for i in range(len(max_bombs)):
+        if ans == max_bombs[i]:
+            cnts.append(i)
+print(max(cnts))
