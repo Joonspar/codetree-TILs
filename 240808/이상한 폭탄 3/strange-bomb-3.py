@@ -17,4 +17,4 @@ else:
     for i in range(len(max_bombs)):
         if ans == max_bombs[i]:
             cnts.append(i)
-print(max(cnts))
+    print(max(cnts))
