@@ -1,11 +1,11 @@
 n = int(input())
-cnt = [0] * 101
 section = [
     list(map(int,input().split()))
     for _ in range(n)
 ]
 possible = False
 for i in range(n):
+    cnt = [0] * 101
     for j in range(n):
         if i == j:
             continue
