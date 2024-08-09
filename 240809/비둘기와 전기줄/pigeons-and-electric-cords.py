@@ -12,6 +12,8 @@ for i in range(n):
         if sections[i][0] == sections[j][0]:
             if sections[i][1] != sections[j][1]:
                 cnt += 1
+                sections[i][1] = sections[j][1]
+                break
             sections[j][0] += extra
-            extra += 1
+            extra += 10
 print(cnt)
