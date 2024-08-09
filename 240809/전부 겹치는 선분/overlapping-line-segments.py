@@ -5,7 +5,7 @@ for _ in range(n):
     for i in range(a,b+1):
         cnt[i] += 1
 
-if cnt.count(3) >= 1:
+if cnt.count(n) >= 1:
     print('Yes')
 else:
     print('No')
