@@ -12,10 +12,9 @@ for i in range(n):
         x1,x2 = section[j]
         for k in range(x1,x2+1):
             cnt[k] += 1
-    if cnt.count(n) >= 1:
+    if cnt.count(n-1) >= 1:
         possible = True
         break
-
 if possible:
     print('Yes')
 else:
