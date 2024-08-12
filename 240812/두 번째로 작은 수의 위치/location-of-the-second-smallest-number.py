@@ -10,4 +10,4 @@ for i in range(n-1):
 if arr.count(ans) < 1 or arr.count(ans) >= 2:
     print(-1)
 else:
-    print(arr.index(ans))
+    print(arr.index(ans)+1)
