@@ -20,4 +20,8 @@ for i in range(n):
         if cnt >= m:
             ans += 1
             break
-print(ans)
+
+if n == 1:
+    print(2)
+else:
+    print(ans)
