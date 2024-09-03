@@ -12,7 +12,5 @@ def swap_chars(s):
             result += char
     
     return result
-
-# 예제 입력
-s = "codctrcc"
-print(swap_chars(s))  # "ocdotroo"
+s = input()
+print(swap_chars(s))
