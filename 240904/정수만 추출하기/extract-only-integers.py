@@ -6,8 +6,8 @@ for i in range(l1):
     if '0' <= s1[i] <='9':
         z += s1[i]
     else:
-        ans.append(z)
         break
+ans.append(z)
 z= ''
 for i in range(l2):
     if '0' <= s2[i] <= '9':
