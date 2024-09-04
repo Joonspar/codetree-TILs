@@ -1,6 +1,6 @@
 a = input()
 if a == 'z':
-    print(a)
+    print('a')
 else:
     a = ord(a)
     a += 1
