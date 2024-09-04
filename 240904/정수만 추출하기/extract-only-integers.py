@@ -13,8 +13,8 @@ for i in range(l2):
     if '0' <= s2[i] <= '9':
         z += s2[i]
     else:
-        ans.append(z)
         break
+ans.append(z)
 
 su = 0
 for i in range(len(ans)):
