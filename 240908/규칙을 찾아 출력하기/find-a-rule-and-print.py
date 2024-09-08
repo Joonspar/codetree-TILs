@@ -1,13 +1,11 @@
 n = int(input())
-ans = n-2
-arr = [
-    ['*' for _ in range(n)]
-    for _ in range(n)
-]
+arr = [['*' for _ in range(n)] for _ in range(n)]
 
-for li in arr[1:n-1]:
-    for i in range(1,n-1):
-        li[i:n-1] = ' '
+# 각 줄의 패턴을 조정
+for i in range(1, n-1):
+    for j in range(i, n-1):
+        arr[i][j] = ' '
 
+# 배열 출력
 for li in arr:
-    print(*li)
+    print(' '.join(li))
