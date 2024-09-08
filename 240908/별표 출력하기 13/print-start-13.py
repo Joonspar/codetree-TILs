@@ -1,16 +1,10 @@
 n = int(input())
-
-x = 1
-y = n
-
+a1,a2 = n,1
 for i in range(2*n):
-    if i % 2 != 0:
-        for _ in range(y):
-            print("*",end=" ")
-        print()
-        y -= 1
+    if i % 2 == 0:
+        print('* '*a1,end='')
+        a1 -= 1
     else:
-        for _ in range(x):
-            print("*",end=" ")
-        print()
-        x += 1
+        print('* '*a2,end='')
+        a2 += 1
+    print()
