@@ -3,8 +3,7 @@ n = int(input())
 def stars(n):
     if n == 0:
         return
-    print('*'*n,end=' ')
+    print('* '*n)
     stars(n-1)
-    print('*'*n,end=' ')
-
+    print('* '*n)
 stars(n)
