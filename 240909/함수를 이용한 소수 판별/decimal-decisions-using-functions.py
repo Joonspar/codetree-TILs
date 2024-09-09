@@ -3,6 +3,8 @@ def func1(a,b):
     res = 0
     is_prime = False
     for i in range(a,b+1):
+        if i == 2:
+            res = 2
         for j in range(2,i):
             if i % j != 0:
                 is_prime = True
