@@ -1,10 +1,9 @@
 n = int(input())
 
-def flower(n):
+def func(n):
     if n == 0:
         return
-    else:
-        print(n,end=' ')
-        flower(n-1)
-        print(n,end=' ')
-flower(n)
+    print(n,end=' ')
+    func(n-1)
+    print(n,end=' ')
+func(n)
