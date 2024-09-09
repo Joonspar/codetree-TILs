@@ -1,9 +1,8 @@
-n = int(input())
+n = int(input()) 
 
-def sqr(n):
+def func(n):
     if n < 10:
         return n**2
-    else:
-        return sqr(n//10) + (n%10)**2 
+    return (n % 10)**2 + func(n // 10)
 
-print(sqr(n))
+print(func(n))
