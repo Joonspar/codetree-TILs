@@ -1,9 +1,9 @@
 n = int(input())
 
-def star(n):
+def func(n):
     if n == 0:
         return
-    else:
-        star(n-1)
-        print('*'*n)
-star(n)
+    func(n-1)
+    print('*'*n)
+
+func(n)
