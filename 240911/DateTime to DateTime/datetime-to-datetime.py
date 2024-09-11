@@ -6,9 +6,14 @@ if o_m >= c:
     total += (60*(b-o_h-1) + (60-abs(o_m-c))) 
 else:
     total += (60*(b-o_h) + c-o_m)
+no = True
+if a == 11:
+    if b == 11 and c < 11:
+        no = False
+    elif b < 11:
+        no = False
 
-if a == 11 and b < 11:
-    if c < 11:
-        print(-1)
-else:
+if no:
     print(total)
+else:
+    print(-1)
