@@ -7,7 +7,7 @@ if o_m >= c:
 else:
     total += (60*(b-o_h) + c-o_m)
 
-if a == 11 and b <= 11:
+if a == 11 and b < 11:
     if c < 11:
         print(-1)
 else:
