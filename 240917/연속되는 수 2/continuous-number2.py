@@ -3,7 +3,7 @@ li = []
 for _ in range(n):
     a = int(input())
     li.append(a)
-ans = 0
+ans = 1
 cnt = 0
 for i in range(n):
     if i == 0 or li[i-1] == li[i]:
