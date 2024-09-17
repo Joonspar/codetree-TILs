@@ -4,9 +4,9 @@ for _ in range(n):
     a = int(input())
     li.append(a)
 ans = 1
-cnt = 0
+cnt = 1
 for i in range(n):
-    if i == 0 or li[i-1] == li[i]:
+    if li[i-1] == li[i]:
         cnt += 1
     else:
         ans = max(cnt,ans)
