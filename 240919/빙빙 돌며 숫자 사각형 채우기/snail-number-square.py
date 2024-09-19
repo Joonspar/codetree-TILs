@@ -8,7 +8,7 @@ rects = [
     for _ in range(n)
 ]
 x , y = 0,0
-rects[x][y] = 1
+rects[0][0] = 1
 dir_num = 0
 dxs , dys = [0,1,0,-1] , [1,0,-1,0]
 def in_range(x,y):
