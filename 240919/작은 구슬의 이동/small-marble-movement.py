@@ -12,13 +12,9 @@ mapper = {
     'L': 3
 }
 n,t = map(int,input().split())
-sections = [
-    [0 for _ in range(n)]
-    for _ in range(n)
-]
-dxs , dys = [0,1,-1,1] , [1,0,0,-1]
+dxs , dys = [0,1,-1,0] , [1,0,0,-1]
 def in_range(x,y):
-    return 0 <= x and x < n and 0 <= y and y < n
+    return 0<=x<=n and 1<=y<=n
 r,c,d = input().split()
 d = mapper[d]
 r , c = int(r) , int(c)
@@ -30,4 +26,4 @@ for _ in range(t):
         r , c = nr , nc
     else:
         d = 3 - d
-print(c,r)
+print(r,c)
