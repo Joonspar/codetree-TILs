@@ -12,11 +12,11 @@ mapper = {
     'L': 3
 }
 n,t = map(int,input().split())
-dxs , dys = [0,1,-1,0] , [1,0,0,-1]
-def in_range(x,y):
-    return 0<=x<=n and 1<=y<=n
 r,c,d = input().split()
 d = mapper[d]
+dxs , dys = [0,1,-1,0] , [1,0,0,-1]
+def in_range(x,y):
+    return 1<=x<=n and 1<=y<=n
 r , c = int(r) , int(c)
 for _ in range(t):
     nr = r + dxs[d]
