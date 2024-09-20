@@ -11,11 +11,14 @@ for i in range(l):
     else:
         a[i] = '1'
     for j in range(l-1,-1,-1):
-        a[j] = int(a[j])
-        s += (2**(l-1-j)) * a[j]
+        # a[j] = int(a[j])
+        s += (2**(l-1-j)) * int(a[j])
     ans = max(s,ans)
-    if a[i] == 1:
-        a[i] = 0
+    # a[i] -= 1
+    # a[i] = abs(a[i])
+    # a[i] = str(a[i])
+    if a[i] == '1':
+        a[i] = '0'
     else:
-        a[i] = 1
+        a[i] = '1'
 print(ans)
