@@ -1,31 +1,60 @@
+# 변수 선언 및 입력:
 n = int(input())
+grid = [
+    [0 for _ in range(n)]
+    for _ in range(n)
+]
 
-# n * n 크기의 정사각형을 0으로 초기화
-rects = [[0 for _ in range(n)] for _ in range(n)]
+# 시작 위치와 방향, 
+# 해당 방향으로 이동할 횟수를 설정합니다.
+curr_x, curr_y = n // 2, n // 2
+move_dir, move_num = 0, 1
 
-# 방향 (오른쪽, 위, 왼쪽, 아래)
-dxs = [0, -1, 0, 1]
-dys = [1, 0, -1, 0]
 
-# 시작 위치 (가운데)
-x, y = n // 2, n // 2
-dir_num = 0  # 오른쪽 방향부터 시작
-rects[x][y] = 1  # 처음 숫자는 1
+def in_range(x, y):
+    return 0 <= x and x < n and 0 <= y and y < n
 
-# 2부터 n*n까지 숫자를 채워넣기
-for i in range(2, n * n + 1):
-    # 현재 방향으로 이동할 다음 위치 계산
-    nx, ny = x + dxs[dir_num], y + dys[dir_num]
+
+# 한 칸 움직이며 청소를 진행합니다.
+def move():
+    global curr_x, curr_y
     
-    # 배열의 범위를 벗어나거나 이미 숫자가 채워져 있으면 방향 전환
-    if nx < 0 or nx >= n or ny < 0 or ny >= n or rects[nx][ny] != 0:
-        dir_num = (dir_num + 1) % 4  # 오른쪽, 위, 왼쪽, 아래 순으로 전환
-        nx, ny = x + dxs[dir_num], y + dys[dir_num]
-    
-    # 다음 좌표로 이동하고 숫자 채우기
-    x, y = nx, ny
-    rects[x][y] = i
+    # 문제에서 원하는 진행 순서대로 
+    # 오른쪽 위 왼쪽 아래 방향이 되도록 정의합니다.
+    dxs, dys = [0, -1, 0, 1], [1, 0, -1, 0]
+    curr_x, curr_y = curr_x + dxs[move_dir], curr_y + dys[move_dir]
 
-# 결과 출력
-for row in rects:
-    print(' '.join(map(str, row)))
+
+def end():
+    return not in_range(curr_x, curr_y)
+
+
+# 시작 위치와 방향, 
+# 해당 방향으로 이동할 횟수를 설정합니다. 
+cnt = 1
+
+while not end():
+    # move_num 만큼 이동합니다.
+    for _ in range(move_num):
+        grid[curr_x][curr_y] = cnt
+        cnt += 1
+        
+        move()
+        
+        # 이동하는 도중 격자를 벗어나게 되면,
+        # 움직이는 것을 종료합니다.
+        if end():
+            break
+    
+    # 방향을 바꿉니다.
+    move_dir = (move_dir + 1) % 4
+    # 만약 현재 방향이 왼쪽 혹은 오른쪽이 된 경우에는
+    # 특정 방향으로 움직여야 할 횟수를 1 증가시킵니다.
+    if move_dir == 0 or move_dir == 2:
+        move_num += 1
+
+# 출력:
+for i in range(n):
+    for j in range(n):
+        print(grid[i][j], end=" ")
+    print()
