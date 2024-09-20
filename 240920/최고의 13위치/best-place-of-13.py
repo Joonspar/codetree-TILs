@@ -12,5 +12,5 @@ for i in range(n):
     cnt = 0
     for j in range(n-2):
         cnt = coins[i][j] + coins[i][j+1] + coins[i][j+2]
-    ans = max(ans,cnt)
+        ans = max(ans,cnt)
 print(ans)
