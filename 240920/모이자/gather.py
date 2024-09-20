@@ -1,6 +1,9 @@
+import sys
 n = int(input())
 li = list(map(int,input().split()))
-ans = 10000
+INT_MAX = sys.maxsize
+INT_MIN = -sys.maxsize
+ans = INT_MAX
 
 for i in range(n):
     s = 0
