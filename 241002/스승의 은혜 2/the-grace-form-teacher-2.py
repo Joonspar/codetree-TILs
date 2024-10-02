@@ -1,7 +1,7 @@
 n,b = map(int,input().split())
 prices = [int(input()) for _ in range(n)]
 ans = 0
-
+prices.sort()
 for i in range(n):
     s = 0
     cnt = 0
