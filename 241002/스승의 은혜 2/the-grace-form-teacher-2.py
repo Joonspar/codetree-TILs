@@ -8,8 +8,10 @@ for i in range(n):
     for j in range(n):
         if i == j:
             s += int(prices[j] / 2)
-        s += prices[j]
-        cnt += 1
+        else:
+            s += prices[j]
+        if s <= b:
+            cnt += 1
         if s > b:
             break
     ans = max(ans,cnt)
