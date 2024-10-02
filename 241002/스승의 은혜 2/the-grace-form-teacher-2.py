@@ -12,7 +12,7 @@ for i in range(n):
             s += prices[j]
         if s <= b:
             cnt += 1
-        if s > b:
+        else:
             break
     ans = max(ans,cnt)
 print(ans)
