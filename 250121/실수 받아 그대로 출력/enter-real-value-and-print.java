@@ -3,6 +3,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double d = sc.nextDouble();
-        System.out.printf("%.f2",d);
+        System.out.printf("%.2f",d);
     }
 }
