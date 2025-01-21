@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
-        String s = Scanner.next();
+        String s = sc.next();
         System.out.println(s);
     }
 }
