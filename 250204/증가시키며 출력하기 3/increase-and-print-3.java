@@ -4,6 +4,7 @@ public class Main {
         int n = 10;
         while (n<=26){
             System.out.print(n + " ");
+            n += 2;
         }
     }
 }
