@@ -6,7 +6,7 @@ public class Main {
         int sum = 0 , cnt = 0;
         while (true){
             int n = sc.nextInt();
-            if (n >= 250){
+            if (n >= 250 || cnt > 10){
                 break;
             }
             sum += n;
