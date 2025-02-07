@@ -11,7 +11,11 @@ public class Main {
             }
             sum += n;
             cnt += 1;
-        }        
+        }
+        if(sum != 0){        
         System.out.printf("%d %.1f", sum , (double) sum/cnt);
+        }else{
+        System.out.println(0 +" " + 0);
+        }
     }
 }
