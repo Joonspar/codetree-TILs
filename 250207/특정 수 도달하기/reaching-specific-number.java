@@ -4,18 +4,15 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
         int sum = 0 , cnt = 0;
-        while (true){
-            int n = sc.nextInt();
-            if (n >= 250 || cnt > 10){
+        for (int i = 0; i<10; i++){
+            int num1 = sc.nextInt();
+            if (num1 < 250){
+                sum += num1;
+                cnt += 1;
+            }else{
                 break;
             }
-            sum += n;
-            cnt += 1;
         }
-        if(sum != 0){        
-        System.out.printf("%d %.1f", sum , (double) sum/cnt);
-        }else{
-        System.out.println(0 +" " + 0);
-        }
+        System.out.printf("%d %.1f" , sum , (double)sum/cnt);
     }
 }
