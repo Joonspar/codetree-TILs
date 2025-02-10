@@ -1,4 +1,4 @@
-imort java.util.Scanner;
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         // Please write your code here.
@@ -7,9 +7,9 @@ public class Main {
         int[] score = new int[4];
         int cnt = 0 , sum = 0;
         for (int i = 0; i<n; i++){
-            for (int j = 0; i<4; j++){
+            for (int j = 0; j<4; j++){
                 score[j] = sc.nextInt();
-                sum += score;
+                sum += score[j];
             }
             int avg = sum / 4;
             if (avg >= 60){
@@ -18,6 +18,7 @@ public class Main {
             }else{
                 System.out.println("fail");
             }
+            sum = 0;
         }
         System.out.println(cnt);
     }
