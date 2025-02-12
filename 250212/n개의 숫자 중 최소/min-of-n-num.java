@@ -4,7 +4,7 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int res = 100000, cnt=0;
+        int res = Integer.MAX_VALUE, cnt=0;
         int[] arr = new int[n];
         for (int i = 0; i<n; i++){
             int num = sc.nextInt();
